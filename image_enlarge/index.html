@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: jQuery Test</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap">
+<style>
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+body {
+	margin: 20px;
+	padding: 20px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	line-height: 1;
+	background-color: #f1f1f1;
+}
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.5em;
+	font-weight: 300;
+	color: #555;
+}
+.container {
+	margin-top: 50px;
+}
+.thumbs {
+	float: left;
+	width: 100px;
+}
+.thumbs img {
+	margin-bottom: 6px;
+	padding: 5px;
+	border: solid 1px #e0e0e0;
+}
+.thumbs img:hover {
+	border-color: #8ac007;
+}
+#large_img {
+	margin-left: 110px;
+	padding: 5px;
+	width: 500px;
+	height: 280px;
+	border: solid 1px #e0e0e0;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+$(function(){
+	let path;
+
+	$(".thumbs a").click(function(e){
+		e.preventDefault();
+
+		path=$(this).attr("data-img");//pic1
+		path="images/" + path +".jpg";
+
+		$("#large_img img").attr({src: path});
+	});
+});
+</script>
+</head>
+
+<body>
+<h1 class="title">basic :: jQuery Test</h1>
+<div class="container">
+	<div class="thumbs">
+		<a href="" data-img="pic1"><img src="images/th_pic1.jpg" alt="pic1"></a>
+		<a href="" data-img="pic2"><img src="images/th_pic2.jpg" alt="pic2"></a>
+		<a href="" data-img="pic3"><img src="images/th_pic3.jpg" alt="pic3"></a>
+	</div>
+	<div id="large_img"><img src="images/pic1.jpg" alt="large image"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿@charset "utf-8";
+
+body {
+	font-family: "Open Sans", "Noto Sans KR", sans-serif;
+	font-size: 1em;
+}
+
+/* #section1 */
+section {
+	margin: 0 auto;
+	width: 1020px;
+}
+#section1 {
+	padding: 70px 0 30px;
+}
+#section1 .content_top {
+	display: flex;
+	justify-content: space-between;
+}
+#section1 .content_top .buttero_img {
+	width: 690px;
+	overflow: hidden;
+}
+#section1 .content_top .buttero_img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: scale(1);
+	transition: transform 0.3s;
+}
+#section1 .content_top .buttero_img:hover img,
+#section1 .content_top .buttero_img:focus img {
+	transform: scale(1.1);
+}
+#section1 .content_top .buttero_txt {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	text-align: center;
+	border: 1px solid #a0a0a0;
+	box-sizing: border-box;
+}
+#section1 .content_top .buttero_txt .inner h4 {
+	font-size: 1.5em;
+}
+#section1 .content_top .buttero_txt .inner span {
+	padding-top: 5px;
+	font-size: 0.875em;
+	color: #302f2f;
+}
+#section1 .content_top .buttero_txt .inner p {
+	padding: 30px 0;
+	font-size: 0.875em;
+	color: #a0a0a0;
+}
+#section1 .content_top .buttero_txt .inner .button {
+	display: inline-block;
+	padding-top: 0;
+	width: 120px;
+	line-height: 35px;
+	background-color: #fff;
+	transition: background-color 0.3s, color 0.3s;
+}
+#section1 .content_top .buttero_txt:hover .inner p,
+#section1 .content_top .buttero_txt:focus .inner p {
+	text-decoration: underline;
+}
+#section1 .content_top .buttero_txt:hover .inner .button,
+#section1 .content_top .buttero_txt:focus .inner .button {
+	background-color: #b5252e;
+	color: #fff;
+}
